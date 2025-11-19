@@ -1,4 +1,11 @@
-/*Definição de Fontes*/
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fontes */
 @font-face {
     font-family: "Unbounded";
     src: url("../fonts/Unbounded-Bold.ttf") format("truetype");
@@ -15,43 +22,51 @@
     font-display: swap;
 }
 
-/*Reset*/
-*{
-    margin: 0;
-    padding: 0;
-}
-
-/*Estilo Desktop*/
+/* Estilo Desktop */
 body{
     background-color: #FFFFFF;
     color: #000000;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Centraliza o logo */
+header {
+    padding-top: 40px;
+    text-align: center;
 }
 
 header img{
-    display: block;
-    margin: 75px 0 0 360px;
+    display: inline-block;
+}
+
+main {
+    margin-top: 40px;
+}
+
+section {
+    text-align: center;
 }
 
 h1{
     font-size: 65px;
     font-family: "Unbounded", sans-serif;
-    text-align: center;
-    margin-top: 60px;
+    margin-top: 20px;
 }
 
 h1 span{
     color: #9747FF;
+    display: block; /* garante quebra de linha bonita */
 }
 
 p{
     font-size: 24px;
-    font-family: "Poppins", sans-serif;
     text-align: center;
-    width: 792px;
+    max-width: 792px;
     margin: 24px auto 0;
 }
 
-a {
+/* Botão */
+.btn-demo {
     color: #FFFFFF;
     font-family: "Poppins", sans-serif;
     font-size: 24px;
@@ -66,52 +81,47 @@ a {
     margin: 40px auto;
 }
 
-a:hover{
+.btn-demo:hover{
     background-color: #8233e8;
 }
 
+/* Imagem */
 section img{
     display: block;
-    width: 792px;
-    height: 446px;
+    max-width: 792px;
+    width: 100%;
+    height: auto;
     margin: 0 auto;
 }
 
-/*Estilo Tablet*/
-@media(max-width:768px){
-
-    header img{
-        margin: 65px 0 0 60px;
+/* Tablet */
+@media (max-width: 768px){
+    h1 {
+        font-size: 48px;
     }
 
     p {
-        width: 648px;
+        font-size: 20px;
+        padding: 0 16px;
+    }
+
+    .btn-demo {
+        width: 260px;
+        font-size: 20px;
     }
 }
 
-/*Estilo Celular*/
-@media(max-width:375px){
-
-    header img{
-        margin: 32px 0 0 16px;
+/* Celular */
+@media (max-width: 480px){
+    header {
+        padding-top: 24px;
     }
 
     h1 {
-        font-size: 40px;
+        font-size: 36px;
     }
 
     p {
-        font-size: 20px;
-        width: 340px
-    }
-
-    a {
-        font-size: 20px;
-        width: 251px;
-    }
-
-    section img{
-        width: 340px;
-        height: 230px;
+        font-size: 18px;
     }
 }
